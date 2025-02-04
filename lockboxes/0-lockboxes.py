@@ -9,20 +9,16 @@ recorro cada box y guardo los box abiertos en el retorno
 
 def canUnlockAll(boxes):
 
-    res = [];
+    if len(boxes) == 0:
+        return False
 
-    for i in range(len(boxes)):
-        res.append(False)
+    keys = [0]
+    for key in keys:
+        for new_key in boxes[key]:
+            if new_key not in keys:
+                keys.append(new_key)
 
-    res[0] = True;
-
-    for x in range(len(boxes)):
-        for y in boxes[x]:
-            if res[x] is True:
-                res[y] = True;
-
-            if y > x :
-                res[y] = True
-
-    return all(res)
+    if len(keys) == len(boxes):
+        return True
+    return False
 
