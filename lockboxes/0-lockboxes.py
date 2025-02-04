@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 '''
-primero creamos el arreglo y lo ponemos en True
-luego recorro los boxes
-recorro cada box y guardo los box abiertos en el retorno
-
+vamos agregando las llaves que vamos encontrando en una lista
+y si al final la longitud de la lista es igual a la longitud de las cajas entonces regresamos True
+tener en cuenta que las llaves pueden ser mayores a la longitud de las cajas
 '''
 
 
