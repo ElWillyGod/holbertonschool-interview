@@ -12,13 +12,12 @@ def canUnlockAll(boxes):
     if len(boxes) == 0:
         return False
 
-    keys = [0]
-    for key in keys:
-        for new_key in boxes[key]:
-            if new_key < len(boxes) and new_key not in keys:
-                keys.append(new_key)
+    results = [0]
+    for res in results:
+        for box in boxes[res]:
+            if box < len(boxes) and box not in results:
+                results.append(box)
 
-    if len(keys) == len(boxes):
+    if len(results) == len(boxes):
         return True
     return False
-
