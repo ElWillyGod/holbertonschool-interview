@@ -6,7 +6,7 @@
  * @head: Pointer to the head of the skip list
  * @value: Value to search for
  *
- * Return: Pointer to the first node where value is located, or NULL if not found
+ * Return: Pointer first node where value is located, or NULL if not found
  */
 
 skiplist_t *linear_skip(skiplist_t *list, int value)
@@ -19,18 +19,19 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	node = list;
 	end = list->express;
 
-	while (end) {
+	while (end)
+	{
 		printf("Value checked at index [%lu] = [%d]\n", end->index, end->n);
 
-		if (end->n >= value) {
+		if (end->n >= value)
 			break;
-		}
 
 		node = end;
 		end = end->express;
 	}
 
-	if (!end) {
+	if (!end)
+	{
 		end = list;
 		while (end->next)
 			end = end->next;
@@ -39,7 +40,8 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	printf("Value found between indexes [%lu] and [%lu]\n",
 		node->index, end->index);
 
-	while (node && node->index <= end->index) {
+	while (node && node->index <= end->index)
+	{
 
 		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 
