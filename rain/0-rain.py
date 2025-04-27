@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''eslint-disable no-tabs, indent'''
+# flake8: noqa
 """
 0-rain
 """
@@ -31,4 +31,3 @@ def rain(walls):
         total += min(left, right) - walls[i]
 
     return total
-'''eslint-enable no-tabs, indent'''
