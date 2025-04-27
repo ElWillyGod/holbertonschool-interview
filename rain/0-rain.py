@@ -8,7 +8,7 @@
 def rain(walls):
     """
     Args:
-        walls (list): list of non-negative integers 
+        walls (list): list of non-negative integers
         representing the height of walls
 
     Returns:
