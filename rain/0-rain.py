@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# flake8: noqa
+# pylint: skip-file
 """
 0-rain
 """
